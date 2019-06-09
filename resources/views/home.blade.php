@@ -13,9 +13,7 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    @foreach($users as $user)
-                    Hello {{ $user->name }} !!!
-                    @endforeach
+                    Hello {{ $users->name }} !!!
                 </div>
             </div>
         </div>

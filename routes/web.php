@@ -21,3 +21,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/profile', 'HomeController@update')->name('profile');
 Route::resource('posts', 'PostController');
 Route::post('/comments', 'CommentController@store')->name('comments.store');
+
+Route::get('ajaxRequest', 'HomeController@ajaxRequest');
+Route::post('ajaxRequest', 'HomeController@ajaxRequestPost');

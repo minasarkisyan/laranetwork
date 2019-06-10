@@ -69,4 +69,17 @@ class HomeController extends Controller
         return view('profile', ['user' => Auth::user()]);
 
     }
+
+    public function ajaxRequest()
+    {
+        return view('posts.ajaxRequest');
+    }
+
+    public function ajaxRequestPost(Request $request)
+    {
+        $user = User::find(1);
+
+        return response()->json(['success'=>$user->name]);
+    }
+
 }
